@@ -1,7 +1,7 @@
 "use client";
 
 import { Button, Input, Card } from "@/components";
-import { addBedAction } from "@/actions";
+import { addBedAction } from "@/feature/beds/actions";
 
 export default function Home() {
   return (
