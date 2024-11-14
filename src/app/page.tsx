@@ -1,12 +1,16 @@
-import { Button, Input } from "@/components";
-import { onClick } from "@/actions";
+"use client";
+
+import { Button, Input, Card } from "@/components";
+import { addBedAction } from "@/actions";
 
 export default function Home() {
   return (
     <>
       <h1>Add a Bed</h1>
-      <Input type="text" />
-      <Button onClick={onClick}>Add bed</Button>
+      <Card>
+        <Input type="text" />
+        <Button onClick={() => addBedAction("Queen size")}>Add bed</Button>
+      </Card>
     </>
   );
 }
