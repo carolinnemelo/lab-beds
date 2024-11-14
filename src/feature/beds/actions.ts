@@ -4,7 +4,10 @@ import { revalidatePath } from "next/cache";
 import { bedsServices } from "./instance";
 
 
-export async function addBedAction(name: string) {
-  await bedsServices.add(name);
+export async function addBedAction(bedFormData: FormData) {
+  console.log(bedFormData)
+  const name = bedFormData.get("bedName");
+  console.log(name);
+  // await bedsServices.add(name);
   revalidatePath("/");
 }
